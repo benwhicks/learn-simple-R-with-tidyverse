@@ -38,6 +38,8 @@ Bonus package: You might want to try out the package `lubridate` as well if you 
 
 R automatically loads in some default data sets. If you type `mtcars` or `iris` into the console then R will show you the data - which is just a table of values (called a data frame). The first cool thing about the tidyverse is the tibble; which is just a souped up version of a data frame. 
 
+Note the `<-` operator is used to assign data to a name (the thing on the left of the `<-` is the name, the thing on the right the data). Because it is so often used the shortcut `Alt -` is handy.  
+
 ``` {r pretty_printing}
 # create tibble versions of the mtcars and iris tables
 tib_mtcars <- as_tibble(mtcars)
@@ -131,4 +133,29 @@ mtcars %>%
 tib_mtcars %>% 
   group_by(gear > 3) %>% # You can group according to a condition
   tally() # tally is a lazy way of just counting 
+
+# even lazier counting
+tib_mtcars %>% 
+  count(am)
+```
+
+## Visualising
+
+The library `ggplot2` is one of the best packages in R. It uses an approach to data visualisation called the _grammar of graphics_, which is essentially a concept of layering different elements to the visualisation. It's best articulated with an example.
+
+``` {r visualisation_1}
+mtcars %>% 
+  ggplot(aes(x = hp, y = mpg, colour = disp)) + # Note that this is +, not %>%. We are now 'laryering' the graphical elements
+  geom_point() + # This adds a 'geom' (visual element) to the data. If you type geom_ you should see the different options
+  ggtitle("A big title", subtitle = "A bit underneath") +
+  theme_minimal()
+
+# We can combine this with the filtering...
+mtcars %>% 
+  filter(am ==1, mpg > 20) %>% 
+  ggplot(aes(x = hp, y = mpg)) + 
+  geom_point() +
+  ggtitle("A filtered graph") +
+  theme_dark()
+
 ```

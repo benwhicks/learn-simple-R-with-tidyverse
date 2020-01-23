@@ -2,18 +2,18 @@
     "collab_server" : "",
     "contents" : "",
     "created" : 1579731818776.000,
-    "dirty" : true,
+    "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
     "hash" : "0",
     "id" : "9F94D44",
-    "lastKnownWriteTime" : 1579734726,
-    "last_content_update" : 1579734782538,
+    "lastKnownWriteTime" : 1579736042,
+    "last_content_update" : 1579736042661,
     "path" : "~/learn-simple-R-with-tidyverse/README.Rmd",
     "project_path" : "README.Rmd",
     "properties" : {
-        "cursorPosition" : "137,3",
-        "scrollLine" : "105"
+        "cursorPosition" : "141,10",
+        "scrollLine" : "132"
     },
     "read_only" : false,
     "read_only_alternatives" : [
