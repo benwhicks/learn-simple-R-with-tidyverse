@@ -310,3 +310,9 @@ mtcars %>%
 ```
 
 ![](README_files/figure-gfm/visualisation_1-2.png)<!-- -->
+
+## Joins
+
+This is how to merge multiple data tables into one. No point repeating
+stuff here as there is a good tutorial at
+\[<https://rpubs.com/williamsurles/293454>\]
